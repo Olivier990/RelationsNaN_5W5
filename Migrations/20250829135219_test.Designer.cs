@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelationsNaN.Data;
 
@@ -11,9 +12,11 @@ using RelationsNaN.Data;
 namespace RelationsNaN.Migrations
 {
     [DbContext(typeof(RelationsNaNContext))]
-    partial class RelationsNaNContextModelSnapshot : ModelSnapshot
+    [Migration("20250829135219_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,7 +100,7 @@ namespace RelationsNaN.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Platform");
+                    b.ToTable("Platforms");
                 });
 
             modelBuilder.Entity("GamePlatform", b =>

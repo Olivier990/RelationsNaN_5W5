@@ -24,7 +24,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Genres}/{action=Index}/{id?}");
+    pattern: "{controller=Games}/{action=Index}/{id?}");
 
 using (var scope = app.Services.CreateScope())
 {
